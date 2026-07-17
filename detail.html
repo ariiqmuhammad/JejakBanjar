@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Detail Lokasi — Jejak Banjar</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container">
+    <a href="index.html" class="nav-brand">Jejak <span>Banjar</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="peta.html">Peta Interaktif</a></li>
+      <li><a href="kunjungan.html">Isi Kunjungan</a></li>
+      <li><a href="dashboard.html">Poin Saya</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="detail-hero">
+  <div class="container">
+    <span class="eyebrow" id="d-kategori">Memuat…</span>
+    <h1 id="d-nama" style="color:var(--kertas-100); margin-top:6px;">—</h1>
+  </div>
+</header>
+
+<section class="container detail-grid">
+  <div>
+    <div class="info-card">
+      <span class="ic" id="d-ikon" style="font-size:3rem;"></span>
+      <p id="d-deskripsi" style="margin-top:14px; color:var(--tinta-600);"></p>
+      <div class="tags" id="d-tags"></div>
+    </div>
+
+    <div class="info-card" style="margin-top:22px;">
+      <span class="eyebrow" style="margin-bottom:14px; display:inline-block;">Rekomendasi pasangan lokasi</span>
+      <div id="d-pasangan" class="grid grid-2" style="margin-top:6px;"></div>
+    </div>
+  </div>
+
+  <div>
+    <div class="info-card">
+      <h3>Informasi</h3>
+      <div class="info-row"><span class="k">Jam buka</span><span class="v" id="d-jam"></span></div>
+      <div class="info-row"><span class="k">Harga</span><span class="v" id="d-harga"></span></div>
+      <div class="info-row"><span class="k">Kontak</span><span class="v" id="d-kontak"></span></div>
+      <div class="info-row"><span class="k">Koordinat</span><span class="v" id="d-koordinat"></span></div>
+      <a href="#" id="d-maps" target="_blank" class="btn btn-ghost btn-block" style="margin-top:16px;">Buka di Google Maps</a>
+      <a href="#" id="d-checkin" class="btn btn-primary btn-block" style="margin-top:10px;">Check-in di sini</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="foot-brand">Jejak Banjar</div>
+    <ul class="foot-links">
+      <li><a href="peta.html">Kembali ke peta</a></li>
+      <li><a href="dashboard.html">Poin Saya</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/detail.js"></script>
+</body>
+</html>

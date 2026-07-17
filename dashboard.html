@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Poin Saya — Jejak Banjar</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container">
+    <a href="index.html" class="nav-brand">Jejak <span>Banjar</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="peta.html">Peta Interaktif</a></li>
+      <li><a href="kunjungan.html">Isi Kunjungan</a></li>
+      <li><a href="dashboard.html" class="active">Poin Saya</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header style="background:var(--kertas-200); padding:50px 0 40px;">
+  <div class="container">
+    <span class="eyebrow">Dashboard</span>
+    <h1 style="margin-top:6px;">Poin & reward kamu</h1>
+    <p style="color:var(--tinta-600); max-width:56ch;">Rekap ini tersimpan di perangkatmu — isi form kunjungan setiap kali datang untuk menambah poin.</p>
+  </div>
+</header>
+
+<section class="container" style="margin-top:-10px; padding-bottom:20px;">
+  <div class="poin-hero">
+    <div>
+      <span class="eyebrow" style="color:var(--kunyit-300);">Total poin</span>
+      <div class="poin-num" id="poin-total">0</div>
+      <p id="poin-keterangan" style="color:rgba(250,244,230,0.75); margin:6px 0 0;"></p>
+    </div>
+    <div>
+      <div class="poin-bar-track"><div class="poin-bar-fill" id="poin-bar" style="width:0%;"></div></div>
+      <a href="kunjungan.html" class="btn btn-light" style="margin-top:16px;">+ Tambah kunjungan</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Reward</span>
+        <h2>Tahapan reward</h2>
+      </div>
+    </div>
+    <div class="reward-strip" id="reward-strip"></div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Riwayat</span>
+        <h2>Riwayat kunjungan</h2>
+      </div>
+      <button id="btn-reset" class="btn btn-ghost">Hapus riwayat</button>
+    </div>
+    <div class="info-card" id="riwayat-list"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="foot-brand">Jejak Banjar</div>
+    <ul class="foot-links">
+      <li><a href="peta.html">Peta</a></li>
+      <li><a href="kunjungan.html">Isi Kunjungan</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>

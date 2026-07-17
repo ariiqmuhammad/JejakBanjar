@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Peta Interaktif — Jejak Banjar</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container">
+    <a href="index.html" class="nav-brand">Jejak <span>Banjar</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="peta.html" class="active">Peta Interaktif</a></li>
+      <li><a href="kunjungan.html">Isi Kunjungan</a></li>
+      <li><a href="dashboard.html">Poin Saya</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header style="background:var(--hutan-900); color:var(--kertas-100); padding:50px 0 34px;">
+  <div class="container">
+    <span class="eyebrow">Peta</span>
+    <h1 style="color:var(--kertas-100); font-size:2.2rem;">Wisata alam & kuliner terdekat</h1>
+    <p style="color:rgba(250,244,230,0.75); max-width:56ch;">Klik penanda di peta atau daftar di samping untuk melihat jarak dan pasangan lokasi terdekatnya.</p>
+  </div>
+</header>
+
+<section class="section" style="padding-top:34px;">
+  <div class="container">
+    <div class="map-shell">
+      <div class="map-panel">
+        <div class="map-filter">
+          <button class="chip active" data-filter="semua">Semua</button>
+          <button class="chip" data-filter="alam">Wisata Alam</button>
+          <button class="chip" data-filter="kuliner">Kuliner</button>
+          <button class="chip" data-filter="murah">Murah</button>
+          <button class="chip" data-filter="family friendly">Family Friendly</button>
+        </div>
+        <div id="map-list"></div>
+      </div>
+      <div id="leaflet-map"></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="foot-brand">Jejak Banjar</div>
+    <ul class="foot-links">
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="kunjungan.html">Isi Kunjungan</a></li>
+      <li><a href="dashboard.html">Poin Saya</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="js/data.js"></script>
+<script src="js/map.js"></script>
+</body>
+</html>

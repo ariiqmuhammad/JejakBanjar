@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Isi Form Kunjungan — Jejak Banjar</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container">
+    <a href="index.html" class="nav-brand">Jejak <span>Banjar</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="peta.html">Peta Interaktif</a></li>
+      <li><a href="kunjungan.html" class="active">Isi Kunjungan</a></li>
+      <li><a href="dashboard.html">Poin Saya</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header style="background:var(--hutan-900); color:var(--kertas-100); padding:50px 0 60px;">
+  <div class="container">
+    <span class="eyebrow">Check-in</span>
+    <h1 style="color:var(--kertas-100); font-size:2.1rem;">Konfirmasi kunjunganmu</h1>
+    <p style="color:rgba(250,244,230,0.75); max-width:56ch;">Isi lokasi dan unggah bukti foto — poin masuk otomatis ke akunmu setelah dikirim.</p>
+  </div>
+</header>
+
+<section class="container" style="margin-top:-30px; padding-bottom:80px;">
+
+  <form id="form-kunjungan" class="form-shell">
+    <div class="field">
+      <label for="nama">Nama</label>
+      <input type="text" id="nama" name="nama" required placeholder="Nama lengkap" />
+    </div>
+
+    <div class="field">
+      <label for="kontak">Nomor HP / email</label>
+      <input type="text" id="kontak" name="kontak" required placeholder="08xx-xxxx-xxxx atau email" />
+    </div>
+
+    <div class="field">
+      <label for="lokasi">Lokasi yang dikunjungi</label>
+      <select id="lokasi" name="lokasi" required></select>
+    </div>
+
+    <div class="field">
+      <label for="tanggal">Tanggal kunjungan</label>
+      <input type="date" id="tanggal" name="tanggal" required />
+    </div>
+
+    <div class="field">
+      <label>Bukti foto</label>
+      <div class="upload-box" id="upload-box">
+        📷 Klik untuk unggah foto kunjungan (opsional, maks. 1 file)
+      </div>
+      <input type="file" id="foto" accept="image/*" style="display:none;" />
+      <div class="upload-preview" id="upload-preview" style="display:none;"><img id="upload-img" alt="Pratinjau foto kunjungan" /></div>
+    </div>
+
+    <div class="field">
+      <label for="catatan">Catatan (opsional)</label>
+      <textarea id="catatan" name="catatan" placeholder="Ceritakan pengalamanmu singkat…"></textarea>
+    </div>
+
+    <p class="form-note">Dengan mengirim form ini, kamu setuju datamu dipakai untuk validasi poin reward Jejak Banjar.</p>
+    <button type="submit" class="btn btn-primary btn-block" style="margin-top:16px;">Kirim & kumpulkan poin</button>
+  </form>
+
+  <div id="form-sukses" class="form-shell success-box" style="display:none;">
+    <div class="ic">🎉</div>
+    <h2>Kunjungan tercatat!</h2>
+    <p id="sukses-pesan" style="color:var(--tinta-600);"></p>
+    <a href="dashboard.html" class="btn btn-primary" style="margin-top:14px;">Lihat poin saya</a>
+    <a href="peta.html" class="btn btn-ghost" style="margin-top:10px;">Jelajahi lokasi lain</a>
+  </div>
+
+</section>
+
+<footer>
+  <div class="container">
+    <div class="foot-brand">Jejak Banjar</div>
+    <ul class="foot-links">
+      <li><a href="peta.html">Peta</a></li>
+      <li><a href="dashboard.html">Poin Saya</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/form.js"></script>
+</body>
+</html>

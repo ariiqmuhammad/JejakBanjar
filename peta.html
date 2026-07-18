@@ -14,45 +14,191 @@
     <a href="index.html" class="nav-brand">Jejak <span>Banjar</span></a>
     <ul class="nav-links">
       <li><a href="index.html">Beranda</a></li>
-      <li><a href="peta.html" class="active">Peta Interaktif</a></li>
-      <li><a href="kunjungan.html">Isi Kunjungan</a></li>
+      <li><a href="peta.html" class="active">Eko Wisata</a></li>
+      <li><a href="kunjungan.html">Gastronomi</a></li>
       <li><a href="dashboard.html">Poin Saya</a></li>
     </ul>
   </div>
 </nav>
 
-<header style="background:var(--hutan-900); color:var(--kertas-100); padding:50px 0 34px;">
+<header style="background:var(--hutan-900); color:var(--kertas-100); padding:50px 0 60px;">
   <div class="container">
-    <span class="eyebrow">Peta</span>
-    <h1 style="color:var(--kertas-100); font-size:2.2rem;">Wisata alam & kuliner terdekat</h1>
-    <p style="color:rgba(250,244,230,0.75); max-width:56ch;">Klik penanda di peta atau daftar di samping untuk melihat jarak dan pasangan lokasi terdekatnya.</p>
+    <span class="eyebrow">Eco Wisata</span>
+    <h1 style="color:var(--kertas-100); font-size:2.1rem;">MAPAY BANJAR</h1>
+    <p style="color:rgba(250,244,230,0.75); max-width:56ch;">Setiap keindahan alam selalu memiliki arti untuk diabadikan, dinikmati, dan dikenang.</p>
   </div>
 </header>
 
-<section class="section" style="padding-top:34px;">
-  <div class="container">
-    <div class="map-shell">
-      <div class="map-panel">
-        <div class="map-filter">
-          <button class="chip active" data-filter="semua">Semua</button>
-          <button class="chip" data-filter="alam">Wisata Alam</button>
-          <button class="chip" data-filter="kuliner">Kuliner</button>
-          <button class="chip" data-filter="murah">Murah</button>
-          <button class="chip" data-filter="family friendly">Family Friendly</button>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kartu Wisata Simpel</title>
+    <style>
+        /* Pengaturan dasar halaman */
+        body {
+            background-color: #F8F5EE;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* INI YANG DITAMBAHKAN: Wadah utama agar kartu berjejer ke samping */
+        .card-container {
+            display: flex;
+            gap: 20px; /* Jarak antar kartu */
+            justify-content: center; /* Menengahkan posisi kartu di layar */
+            padding: 40px 20px;
+            flex-wrap: wrap; /* Jika layar sempit, kartu otomatis turun ke bawah */
+        }
+
+        /* Kotak kartu utama */
+        .card {
+            background-color: white;
+            width: 320px;
+            border-radius: 12px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        /* Kotak hijau pengganti gambar */
+        .gambar-hijau {
+            background-color: #5C7A53;
+            height: 160px;
+            border-radius: 8px;
+            text-align: center;
+            line-height: 160px; 
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        /* Label abu-abu kehijauan */
+        .label {
+            background-color: #EBF2EB;
+            color: #1A4638;
+            font-size: 10px;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 10px;
+        }
+
+        /* Teks Judul dan Deskripsi */
+        h2 {
+            margin: 10px 0 5px 0;
+            color: #032B25;
+            font-size: 20px;
+        }
+
+        p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.4;
+            margin-bottom: 20px;
+        }
+
+        /* Bagian bawah (Mitra dan Tombol) */
+        .bawah {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .mitra {
+            color: #999;
+            font-size: 12px;
+        }
+
+        /* DESAIN TOMBOL LINK */
+        .tombol-link {
+            text-decoration: none; 
+            background-color: white;
+            color: #003366; 
+            border: 1.5px solid black;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 13px;
+            display: inline-block;
+        }
+
+        /* Efek saat tombol disentuh */
+        .tombol-link:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- INI BUNGKUS UTAMANYA (Agar berjejer ke samping) -->
+    <div class="card-container">
+
+        <!-- KARTU PERTAMA -->
+        <div class="card">
+            <!-- Bagian Atas: Gambar -->
+            <img src="images/situ-mustika.jpg" alt="Foto Situ Mustika" class="card-image">
+
+            <!-- Bagian Tengah: Teks -->
+            <span class="label">RUMAH MAKAN</span>
+            <h2>Situ Mustika</h2>
+            <p>Oase hijau di tengah kota dengan danau alam yang tenang dan pulau kecil di tengahnya. Destinasi sejuk yang ideal untuk jalan-jalan santai, spot foto jembatan gantung, dan rekreasi keluarga.</p>
+
+            <!-- Bagian Bawah: Info & Tombol -->
+            <div class="bawah">
+                <span class="mitra">Mitra Resmi</span>
+                <!-- Tombol Link Google Maps -->
+                <a href="https://maps.app.goo.gl/my2snsicRpc1KqTNA?g_st=ac" target="_blank" class="tombol-link">Info Lokasi</a>
+            </div>
         </div>
-        <div id="map-list"></div>
-      </div>
-      <div id="leaflet-map"></div>
+
+
+        <!-- KARTU KEDUA -->
+        <div class="card">
+            <!-- Bagian Atas: Gambar -->
+            <div class="gambar-hijau">💧</div>
+
+            <!-- Bagian Tengah: Teks -->
+            <span class="label">RUMAH MAKAN</span>
+            <h2>Pasir Cabe</h2>
+            <p>Perpaduan agrowisata dan keindahan perbukitan hijau. Destinasi edukatif yang menawarkan suasana pedesaan menyejukkan dan spot foto yang estetik.</p>
+
+            <!-- Bagian Bawah: Info & Tombol -->
+            <div class="bawah">
+                <span class="mitra">Mitra Resmi</span>
+                <!-- Tombol Link Google Maps (Ganti # dengan link map untuk kartu kedua nanti) -->
+                <a href="https://maps.app.goo.gl/j8qy7uQh6NcTuept8" target="_blank" class="tombol-link">Info Lokasi</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <!-- Bagian Atas: Gambar -->
+            <div class="gambar-hijau">💧</div>
+
+            <!-- Bagian Tengah: Teks -->
+            <span class="label">RUMAH MAKAN</span>
+            <h2>Puncak Pager Batu</h2>
+            <p>​Spot terbaik menikmati lanskap Kota Banjar dari ketinggian. Tempat favorit untuk berburu sunset, berkemah, dan menikmati gemerlap lampu kota di malam hari.</p>
+
+            <!-- Bagian Bawah: Info & Tombol -->
+            <div class="bawah">
+                <span class="mitra">Mitra Resmi</span>
+                <!-- Tombol Link Google Maps (Ganti # dengan link map untuk kartu kedua nanti) -->
+                <a href="https://maps.app.goo.gl/vBrypt1TmRZN7hnT6?g_st=ac" target="_blank" class="tombol-link">Info Lokasi</a>
+            </div>
+        </div>
     </div>
-  </div>
-</section>
+    <!-- AKHIR BUNGKUS UTAMA -->
+
+</body>
+</html>
 
 <footer>
   <div class="container">
-    <div class="foot-brand">Jejak Banjar</div>
+    <div>
+      <div class="foot-brand">Jejak Banjar</div>
+      <small style="margin-top:8px;">Platform wisata terpadu Kota Banjar — alam, kuliner, dan cerita di antaranya.</small>
+    </div>
     <ul class="foot-links">
-      <li><a href="index.html">Beranda</a></li>
-      <li><a href="kunjungan.html">Isi Kunjungan</a></li>
+      <li><a href="peta.html">Eko Wisata</a></li>
+      <li><a href="kunjungan.html">Gastronomi</a></li>
       <li><a href="dashboard.html">Poin Saya</a></li>
     </ul>
   </div>

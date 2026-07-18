@@ -13,8 +13,8 @@
     <a href="index.html" class="nav-brand">Jejak <span>Banjar</span></a>
     <ul class="nav-links">
       <li><a href="index.html">Beranda</a></li>
-      <li><a href="peta.html">Peta Interaktif</a></li>
-      <li><a href="kunjungan.html" class="active">Isi Kunjungan</a></li>
+      <li><a href="peta.html">Eko Wisata</a></li>
+      <li><a href="kunjungan.html" class="active">Gastronomi</a></li>
       <li><a href="dashboard.html">Poin Saya</a></li>
     </ul>
   </div>
@@ -22,68 +22,184 @@
 
 <header style="background:var(--hutan-900); color:var(--kertas-100); padding:50px 0 60px;">
   <div class="container">
-    <span class="eyebrow">Check-in</span>
-    <h1 style="color:var(--kertas-100); font-size:2.1rem;">Konfirmasi kunjunganmu</h1>
-    <p style="color:rgba(250,244,230,0.75); max-width:56ch;">Isi lokasi dan unggah bukti foto — poin masuk otomatis ke akunmu setelah dikirim.</p>
+    <span class="eyebrow">Gastronomi</span>
+    <h1 style="color:var(--kertas-100); font-size:2.1rem;">Taste of Banjar</h1>
+    <p style="color:rgba(250,244,230,0.75); max-width:56ch;">Setiap hidangan memiliki cerita. Jelajahi cita rasa khas Kota Banjar mulai dari kuliner legendaris hingga café favorit anak muda.</p>
   </div>
 </header>
 
-<section class="container" style="margin-top:-30px; padding-bottom:80px;">
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kartu Wisata Simpel</title>
+    <style>
+        /* Pengaturan dasar halaman */
+        body {
+            background-color: #F8F5EE;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
 
-  <form id="form-kunjungan" class="form-shell">
-    <div class="field">
-      <label for="nama">Nama</label>
-      <input type="text" id="nama" name="nama" required placeholder="Nama lengkap" />
+        /* INI YANG DITAMBAHKAN: Wadah utama agar kartu berjejer ke samping */
+        .card-container {
+            display: flex;
+            gap: 20px; /* Jarak antar kartu */
+            justify-content: center; /* Menengahkan posisi kartu di layar */
+            padding: 40px 20px;
+            flex-wrap: wrap; /* Jika layar sempit, kartu otomatis turun ke bawah */
+        }
+
+        /* Kotak kartu utama */
+        .card {
+            background-color: white;
+            width: 320px;
+            border-radius: 12px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        /* Kotak hijau pengganti gambar */
+        .gambar-hijau {
+            background-color: #5C7A53;
+            height: 160px;
+            border-radius: 8px;
+            text-align: center;
+            line-height: 160px; 
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        /* Label abu-abu kehijauan */
+        .label {
+            background-color: #EBF2EB;
+            color: #1A4638;
+            font-size: 10px;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 10px;
+        }
+
+        /* Teks Judul dan Deskripsi */
+        h2 {
+            margin: 10px 0 5px 0;
+            color: #032B25;
+            font-size: 20px;
+        }
+
+        p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.4;
+            margin-bottom: 20px;
+        }
+
+        /* Bagian bawah (Mitra dan Tombol) */
+        .bawah {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .mitra {
+            color: #999;
+            font-size: 12px;
+        }
+
+        /* DESAIN TOMBOL LINK */
+        .tombol-link {
+            text-decoration: none; 
+            background-color: white;
+            color: #003366; 
+            border: 1.5px solid black;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 13px;
+            display: inline-block;
+        }
+
+        /* Efek saat tombol disentuh */
+        .tombol-link:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- INI BUNGKUS UTAMANYA (Agar berjejer ke samping) -->
+    <div class="card-container">
+
+        <!-- KARTU PERTAMA -->
+        <div class="card">
+            <!-- Bagian Atas: Gambar -->
+            <div class="gambar-hijau">💧</div>
+
+            <!-- Bagian Tengah: Teks -->
+            <span class="label">RUMAH MAKAN</span>
+            <h2>Dapur Hawu Korina</h2>
+            <p>Sajian khas Sunda autentik dengan cita rasa legendaris yang selalu dirindukan oleh masyarakat maupun wisatawan</p>
+
+            <!-- Bagian Bawah: Info & Tombol -->
+            <div class="bawah">
+                <span class="mitra">Mitra Resmi</span>
+                <!-- Tombol Link Google Maps -->
+                <a href="https://maps.app.goo.gl/c1w1fz7pdGVjuXiA9" target="_blank" class="tombol-link">Info Lokasi</a>
+            </div>
+        </div>
+
+
+        <!-- KARTU KEDUA -->
+        <div class="card">
+            <!-- Bagian Atas: Gambar -->
+            <div class="gambar-hijau">💧</div>
+
+            <!-- Bagian Tengah: Teks -->
+            <span class="label">RUMAH MAKAN</span>
+            <h2>Sorabi Hawu</h2>
+            <p>Sorabi tradisional yang dimasak di atas tungku hawu, menghadirkan aroma khas dan cita rasa autentik khas Sunda.</p>
+
+            <!-- Bagian Bawah: Info & Tombol -->
+            <div class="bawah">
+                <span class="mitra">Mitra Resmi</span>
+                <!-- Tombol Link Google Maps (Ganti # dengan link map untuk kartu kedua nanti) -->
+                <a href="https://maps.app.goo.gl/6ZC4VuF5X67EE2WP7" target="_blank" class="tombol-link">Info Lokasi</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <!-- Bagian Atas: Gambar -->
+            <div class="gambar-hijau">💧</div>
+
+            <!-- Bagian Tengah: Teks -->
+            <span class="label">RUMAH MAKAN</span>
+            <h2>Banjar Atas</h2>
+            <p>Sajian khas Sunda autentik dengan cita rasa legendaris yang selalu dirindukan oleh masyarakat maupun wisatawan.</p>
+
+            <!-- Bagian Bawah: Info & Tombol -->
+            <div class="bawah">
+                <span class="mitra">Mitra Resmi</span>
+                <!-- Tombol Link Google Maps (Ganti # dengan link map untuk kartu kedua nanti) -->
+                <a href="https://maps.app.goo.gl/DBRbdEJdGkGZf4cK7" target="_blank" class="tombol-link">Info Lokasi</a>
+            </div>
+        </div>
     </div>
+    <!-- AKHIR BUNGKUS UTAMA -->
 
-    <div class="field">
-      <label for="kontak">Nomor HP / email</label>
-      <input type="text" id="kontak" name="kontak" required placeholder="08xx-xxxx-xxxx atau email" />
-    </div>
-
-    <div class="field">
-      <label for="lokasi">Lokasi yang dikunjungi</label>
-      <select id="lokasi" name="lokasi" required></select>
-    </div>
-
-    <div class="field">
-      <label for="tanggal">Tanggal kunjungan</label>
-      <input type="date" id="tanggal" name="tanggal" required />
-    </div>
-
-    <div class="field">
-      <label>Bukti foto</label>
-      <div class="upload-box" id="upload-box">
-        📷 Klik untuk unggah foto kunjungan (opsional, maks. 1 file)
-      </div>
-      <input type="file" id="foto" accept="image/*" style="display:none;" />
-      <div class="upload-preview" id="upload-preview" style="display:none;"><img id="upload-img" alt="Pratinjau foto kunjungan" /></div>
-    </div>
-
-    <div class="field">
-      <label for="catatan">Catatan (opsional)</label>
-      <textarea id="catatan" name="catatan" placeholder="Ceritakan pengalamanmu singkat…"></textarea>
-    </div>
-
-    <p class="form-note">Dengan mengirim form ini, kamu setuju datamu dipakai untuk validasi poin reward Jejak Banjar.</p>
-    <button type="submit" class="btn btn-primary btn-block" style="margin-top:16px;">Kirim & kumpulkan poin</button>
-  </form>
-
-  <div id="form-sukses" class="form-shell success-box" style="display:none;">
-    <div class="ic">🎉</div>
-    <h2>Kunjungan tercatat!</h2>
-    <p id="sukses-pesan" style="color:var(--tinta-600);"></p>
-    <a href="dashboard.html" class="btn btn-primary" style="margin-top:14px;">Lihat poin saya</a>
-    <a href="peta.html" class="btn btn-ghost" style="margin-top:10px;">Jelajahi lokasi lain</a>
-  </div>
+</body>
+</html>
 
 </section>
 
 <footer>
   <div class="container">
-    <div class="foot-brand">Jejak Banjar</div>
+    <div>
+      <div class="foot-brand">Jejak Banjar</div>
+      <small style="margin-top:8px;">Platform wisata terpadu Kota Banjar — alam, kuliner, dan cerita di antaranya.</small>
+    </div>
     <ul class="foot-links">
-      <li><a href="peta.html">Peta</a></li>
+      <li><a href="peta.html">Eko Wisata</a></li>
+      <li><a href="kunjungan.html">Gastronomi</a></li>
       <li><a href="dashboard.html">Poin Saya</a></li>
     </ul>
   </div>
